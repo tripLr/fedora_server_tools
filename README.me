@@ -1,0 +1,16 @@
+# Readme
+triplr server for fedora 29 and 30, tested !
+Install fail2ban , activate, and then copy over the following files
+edit /etc/ssh/sshd_config 
+   add username to end of file and settings to allow login
+ssh login cannot occur without username
+root ssh not allowed
+if someone happens to get ssh access without a username, no terminal is allowed !
+
+once user has ssh keys loaded in server, password login can be disallowd, allowing key login only
+
+then restart sshd, fail2ban and firewalld then reboot
+
+place scripts or folders in appropriate root folders
+sshd config file in /etc/ssh/sshd.config 
+and fail2ban in /etc/fail2ban/
